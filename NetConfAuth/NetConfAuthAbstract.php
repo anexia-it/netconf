@@ -1,6 +1,6 @@
 <?php namespace Lamoni\NetConf\NetConfAuth;
 
-use Net_SSH2;
+use phpseclib\Net\SSH2;
 
 /**
  * Class NetConfAuthAbstract
@@ -22,14 +22,15 @@ abstract class NetConfAuthAbstract
 
         $this->authParams = $authParams;
     }
-
-    /**
-     * All classes extending NetConfAuthAbstract require the specification of logging in
-     *
-     * @param Net_SSH2 $ssh
-     * @return mixed
-     */
-    abstract public function login(Net_SSH2 &$ssh);
+	
+	/**
+	 * All classes extending NetConfAuthAbstract require the specification of logging in
+	 *
+	 * @param SSH2 $ssh
+	 *
+	 * @return mixed
+	 */
+    abstract public function login(SSH2 $ssh);
 
     /**
      * All children will need this to validate the passed inputs against our defined inputs
