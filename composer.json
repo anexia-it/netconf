@@ -1,10 +1,16 @@
 {
     "name": "anexia-it/netconf",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/anexia-it/phpseclib"
+        }
+    ],
     "description": "A vendor-agnostic PHP NETCONF implementation",
     "license": "MIT",
     "require": {
         "php": ">= 5.4.16",
-        "phpseclib/phpseclib": "~2.0"
+        "anexia-it/phpseclib": "dev-master"
     },
     "authors": [
         { 
