@@ -169,7 +169,7 @@ class NetConf
 
         $data = str_replace('<?xml version="1.0"?>', '', (string)$data);
 
-        $data = new SimpleXMLElement("<{$rootNode}>$data</{$rootNode}>");
+        $data = new SimpleXMLElement("<{$rootNode}>$data</{$rootNode}>", LIBXML_PARSEHUGE);
 
         foreach ($attributes as $attribute_name=>$attribute_value) {
 
